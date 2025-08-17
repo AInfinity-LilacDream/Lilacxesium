@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "lilacxesium",
+  "version": "${version}",
+  "name": "Lilacxesium",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/lilacxesium/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "fabric-datagen": [
+      "mcevent.lilacxesium.client.LilacxesiumDataGenerator"
+    ],
+    "client": [
+      "mcevent.lilacxesium.client.LilacxesiumClient"
+    ],
+    "main": [
+      "mcevent.lilacxesium.Lilacxesium"
+    ]
+  },
+  "mixins": [
+    "lilacxesium.mixins.json",
+    {
+      "config": "lilacxesium.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
